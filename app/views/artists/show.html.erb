@@ -1,0 +1,9 @@
+<label>Artist Information:</label><br>
+<%= @artist.name %><br>
+<%= @artist.title %><br>
+<%= @artist.age %><br>
+
+This artist plays:<br>
+<% @artist.instruments.each do |instrument| %>
+  <%= instrument.name %><br>
+<% end %>

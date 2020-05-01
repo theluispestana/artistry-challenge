@@ -1,0 +1,10 @@
+<label>Connect an Artist with an Instrument</label>
+<%= form_for(@artist_instrument) do |f| %>
+  <%= f.label :artist_id %><br>
+  <%= f.collection_select :artist_id, Artist.all, :id, :title %><br>
+  
+  <%= f.label :instrument_id %><br>
+  <%= f.collection_select :instrument_id, Instrument.all, :id, :name %><br>
+
+  <%= f.submit %>
+<% end %>
